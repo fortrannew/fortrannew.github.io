@@ -1,11 +1,11 @@
 {
-    "name": "svipa",
-    "short_name": "svipa",
+    "name": "kembri",
+    "short_name": "kembri",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "KEMBRI - мобильное приложение",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
