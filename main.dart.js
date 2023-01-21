@@ -40247,7 +40247,7 @@ case 1:return A.M(q,r)}})
 return A.N($async$rG,r)}}
 A.Ej.prototype={
 I(a){var s=$.Y4()
-return new A.uK(this.c?"chats":"auth",s)}}
+return new A.uK(this.c?"orders":"auth",s)}}
 A.uK.prototype={
 ak(){return new A.pJ(B.n)}}
 A.pJ.prototype={
