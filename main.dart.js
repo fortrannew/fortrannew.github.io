@@ -42587,41 +42587,44 @@ break
 case 1:return A.N(q,r)}})
 return A.O($async$jj,r)},
 mE(a){return this.abi(a)},
-abi(a1){var s=0,r=A.P(t.N),q,p=this,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0
-var $async$mE=A.Q(function(a2,a3){if(a2===1)return A.M(a3,r)
-while(true)switch(s){case 0:b=A.RY().j(0)
-a=B.c.A(b,"https://")?"https://":"http://"
-b=A.bo(b,a,"")
+abi(a0){var s=0,r=A.P(t.N),q,p=this,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a
+var $async$mE=A.Q(function(a1,a2){if(a1===1)return A.M(a2,r)
+while(true)switch(s){case 0:d={}
+c=A.RY().j(0)
+b=B.c.A(c,"https://")?"https://":"http://"
+c=A.bo(c,b,"")
 o=$.cj()
-n=a+B.b.gP(b.split("/"))+"/vklogin"
-m=A.oC(new A.a1h(n),!0,null,t.z)
+c=B.b.gP(c.split("/"))
+d.a=""
+d.a=b+c+"/#vklogin"
+n=A.oC(new A.a1h(d),!0,null,t.z)
 s=3
-return A.H(A.dB(a1,!1).hx(m),$async$mE)
-case 3:l=a3
-m=J.am(l)
-if(J.e(m.h(l,"error"),"false")){q="\u041e\u0448\u0438\u0431\u043a\u0430 \u043f\u0440\u0438 \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0438!"
+return A.H(A.dB(a0,!1).hx(n),$async$mE)
+case 3:m=a2
+n=J.am(m)
+if(J.e(n.h(m,"error"),"false")){q="\u041e\u0448\u0438\u0431\u043a\u0430 \u043f\u0440\u0438 \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0438!"
 s=1
-break}k=m.h(l,"code")
-m=t.N
-a0=B.aZ
+break}l=n.h(m,"code")
+n=t.N
+a=B.aZ
 s=4
-return A.H(o.jM(J.T($.iX().h(0,"web"),"url"),"post",A.ac(["post",J.T($.iX().h(0,"web"),"type"),"function","filegetcontents","sql","https://oauth.vk.com/access_token?client_id=51536577&client_secret=clPM6njoPgQGKY5MAHq7&code="+k+"&redirect_uri="+n],m,m)),$async$mE)
-case 4:j=a0.mN(0,a3,null)
-i=J.am(j)
-h=J.aC(i.h(j,"access_token"))
-g=J.aC(i.h(j,"user_id"))
-f=J.aC(i.h(j,"email"))
-a0=B.aZ
+return A.H(o.jM(J.T($.iX().h(0,"web"),"url"),"post",A.ac(["post",J.T($.iX().h(0,"web"),"type"),"function","filegetcontents","sql","https://oauth.vk.com/access_token?client_id=51536577&client_secret=clPM6njoPgQGKY5MAHq7&code="+l+"&redirect_uri="+d.a],n,n)),$async$mE)
+case 4:k=a.mN(0,a2,null)
+d=J.am(k)
+j=J.aC(d.h(k,"access_token"))
+i=J.aC(d.h(k,"user_id"))
+h=J.aC(d.h(k,"email"))
+a=B.aZ
 s=5
-return A.H(o.jM(J.T($.iX().h(0,"web"),"url"),"post",A.ac(["post",J.T($.iX().h(0,"web"),"type"),"function","filegetcontents","sql","https://api.vk.com/method/users.get?v=5.101&uids="+g+"&fields=uid,first_name,last_name,nickname,screen_name,sex,bdate,city,country,timezone,email,photo&access_token="+h],m,m)),$async$mE)
-case 5:j=a0.mN(0,a3,null)
-m=J.am(j)
-e=J.aC(J.T(J.T(m.h(j,"response"),0),"first_name"))
-d=J.aC(J.T(J.T(m.h(j,"response"),0),"last_name"))
+return A.H(o.jM(J.T($.iX().h(0,"web"),"url"),"post",A.ac(["post",J.T($.iX().h(0,"web"),"type"),"function","filegetcontents","sql","https://api.vk.com/method/users.get?v=5.101&uids="+i+"&fields=uid,first_name,last_name,nickname,screen_name,sex,bdate,city,country,timezone,email,photo&access_token="+j],n,n)),$async$mE)
+case 5:k=a.mN(0,a2,null)
+n=J.am(k)
+g=J.aC(J.T(J.T(n.h(k,"response"),0),"first_name"))
+f=J.aC(J.T(J.T(n.h(k,"response"),0),"last_name"))
 s=6
-return A.H(p.aaz(f,"",e,null,J.aC(J.T(J.T(m.h(j,"response"),0),"photo")),d),$async$mE)
-case 6:c=a3
-if(c!=="true"){q=c
+return A.H(p.aaz(h,"",g,null,J.aC(J.T(J.T(n.h(k,"response"),0),"photo")),f),$async$mE)
+case 6:e=a2
+if(e!=="true"){q=e
 s=1
 break}q="true"
 s=1
@@ -42789,7 +42792,7 @@ break
 case 4:case 1:return A.N(q,r)}})
 return A.O($async$wK,r)}}
 A.a1h.prototype={
-$1(a){return new A.lM(this.a,null,null)},
+$1(a){return new A.lM(this.a.a,null,null)},
 $S:127}
 A.lM.prototype={
 al(){return new A.SL(B.k)}}
