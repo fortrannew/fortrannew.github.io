@@ -35,7 +35,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '2133167368';
+    var serviceWorkerVersion = '3741917623';
   </script>
 
   <!-- This script adds the flutter initialization JS code -->
@@ -58,6 +58,145 @@ top: 0px;
 bottom: 0px;
 margin: auto;
 "></div>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=28a860cf-e08e-4a74-b576-667ce35e3a17&lang=ru_RU" type="text/javascript"></script>
+  <script>
+  var mylcpYaMap;
+  var mylcpYaMapCenterX;
+  var mylcpYaMapCenterY;
+  var mylcpYaMapZoom;
+function myMap (center_x,center_y,zoom){
+    var elem=document.getElementById('lcp_ya_map');
+    if (!elem){
+      var lcpMap = document.createElement('div');
+  lcpMap.id = 'lcp_ya_map';
+  lcpMap.style = 'width: 100%; height:100%;padding-top:56px;';
+  // lcpMap.style = ;
+  document.body?.append(lcpMap);
+  mylcpYaMapCenterX=center_x;
+  mylcpYaMapCenterY=center_y;
+  mylcpYaMapZoom=zoom;
+  ymaps.ready(lcpinit);
+    } else {
+      elem.style.display='block';
+    }
+  }
+  function lcpinit() {
+    mylcpYaMap = new ymaps.Map("lcp_ya_map", {
+		center: [mylcpYaMapCenterY,mylcpYaMapCenterX],
+		zoom: mylcpYaMapZoom
+	}, {
+		searchControlProvider: 'yandex#search'
+	});
+  }
+
+  function mylcpYaMapDelete(){
+    mylcpYaMap.destroy();
+  }
+
+  function addMarker(x,y,img='data:image/png;base64,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',balloonContent=''){
+    var myCollection = new ymaps.GeoObjectCollection();
+    // Добавим метку
+	var myPlacemark = new ymaps.Placemark([
+		x,y
+	], {
+		balloonContent: balloonContent,
+	}, {
+    iconLayout: 'default#image',
+    // Своё изображение иконки метки.
+    iconImageHref: img,
+    // Размеры метки.
+    iconImageSize: [36, 36],
+    // Смещение левого верхнего угла иконки относительно
+    // её "ножки" (точки привязки).
+    iconImageOffset: [-18, -18],
+	});
+	myCollection.add(myPlacemark);
+  mylcpYaMap.geoObjects.add(myCollection);
+  }
+
+  function setRoute(pointsArr,strokeWidth=4,strokeColor="#ff0000",addPoint = true,img,autoMoveCamera = true,balloonContent=''){
+    // pointsArr должно быть в виде объекта, закодированного в json:
+    // pointsArr={
+    //   'x':[55.755831, 59.938630],
+    //   'y':[37.617673, 30.314130],
+    // };
+    var obj = JSON.parse(pointsArr);
+    if (typeof obj['x'] === null) {
+      console.log('Укажите массив X');
+      return;
+    }
+    if (typeof obj['y'] === null) {
+      console.log('Укажите массив Y');
+      return;
+    }
+    if (typeof obj['balloonContent'] === null) {
+      console.log('Укажите массив balloonContent');
+      return;
+    }
+    if (obj['x'].length <= 0) {
+      console.log('Укажите массив X');
+      return;
+    }
+    if (obj['y'].length <= 0) {
+      console.log('Укажите массив Y');
+      return;
+    }
+    if (obj['balloonContent'].length <= 0) {
+      console.log('Укажите массив balloonContent');
+      return;
+    }
+
+    var objArr=[];
+    for (let index = 0; index < obj['x'].length; index++) {
+      if (addPoint==true){
+        var image=img;
+        if ((typeof obj['img']!=='undefined')&&(obj['img']!==null)){
+          image=((typeof obj['img'][index]!=='undefined')&&(obj['img'][index]!==null))?obj['img'][index]:image;
+        }
+        if ((typeof image!=='undefined')&&(image!==null)){
+          addMarker(obj['x'][index],obj['y'][index],image,obj['balloonContent'][index]);
+        } else {
+          addMarker(obj['x'][index],obj['y'][index],undefined,obj['balloonContent'][index]);
+        }
+      }
+      objArr[index]=[obj['x'][index],obj['y'][index]];
+    }
+    // строим маршрут
+    ymaps.route(objArr).then(
+    function (route) {
+      route.options.set({
+        routeStrokeWidth: strokeWidth, // Толщина линии
+        routeStrokeColor: strokeColor, // Цвет линии
+        wayPointVisible: false, // Отображать ли метки
+        mapStateAutoApply: autoMoveCamera, // Выравнивание карты по центру
+    });
+      mylcpYaMap.geoObjects.add(route);
+        // Зададим содержание иконок начальной и конечной точкам маршрута.
+        // С помощью метода getWayPoints() получаем массив точек маршрута.
+        // Массив транзитных точек маршрута можно получить с помощью метода getViaPoints.
+        // var points = route.getWayPoints(),
+        //     lastPoint = points.getLength() - 1;
+        // Задаем стиль метки - иконки будут красного цвета, и
+        // их изображения будут растягиваться под контент.
+        // points.options.set('preset', 'twirl#redStretchyIcon');
+        // Задаем контент меток в начальной и конечной точках.
+        // points.get(0).properties.set('iconContent', 'А');
+        // points.get(lastPoint).properties.set('iconContent', 'Б');
+    },
+    function (error) {
+      console.log("Возникла ошибка: " + error.message);
+    }
+  );
+  }
+
+  function clearYaMap(){
+    mylcpYaMap.geoObjects.removeAll();
+  }
+  </script>
+
+
+
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
