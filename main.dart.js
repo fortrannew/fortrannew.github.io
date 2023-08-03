@@ -54382,20 +54382,15 @@ return A.u($async$my,r)},
 rA(a,b,c){return this.a5i(a,b,c)},
 a5i(a,b,c){var s=0,r=A.v(t.GU),q,p=2,o,n,m,l,k,j,i,h,g
 var $async$rA=A.q(function(d,e){if(d===1){o=e
-s=p}while(true)switch(s){case 0:j=c
-i=j
-j=A.bL(i,"https://","")
-i=j
-j=A.bL(i,"http://","")
-j=B.e.gS(j.split("/"))
-j=B.e.gS(j.split("?"))
+s=p}while(true)switch(s){case 0:i=A.bL(c,"https://","")
+B.e.gS(B.e.gS(A.bL(i,"http://","").split("/")).split("?"))
 A.aNw()
 n=new A.vA(A.aW(t.Gf))
 m=null
 p=4
-i=t.N
+l=t.N
 s=7
-return A.h(n.qg("POST",A.fR(c,0,null),A.M(["Content-Type","application/json","Host",j],i,i),B.ae.oW(A.M(["flutterUnsigned8integers",a,"file_name",b],i,t.K),null),null),$async$rA)
+return A.h(n.qg("POST",A.fR(c,0,null),A.M(["Content-Type","application/json"],l,l),B.ae.oW(A.M(["flutterUnsigned8integers",a,"file_name",b],l,t.K),null),null),$async$rA)
 case 7:m=e
 p=2
 s=6
@@ -54411,32 +54406,32 @@ s=11
 break
 case 9:p=8
 g=o
-i=t.N
-i=A.M(["error","false","string","\u041d\u0435\u0442 \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u043a \u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443!"],i,i)
-q=i
+l=t.N
+l=A.M(["error","false","string","\u041d\u0435\u0442 \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u043a \u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443!"],l,l)
+q=l
 s=1
 break
 s=11
 break
 case 8:s=3
 break
-case 11:i=t.N
-q=A.M(["error","false","string","\u041e\u0448\u0438\u0431\u043a\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u043a \u0441\u0435\u0440\u0432\u0435\u0440\u0443!"],i,i)
+case 11:l=t.N
+q=A.M(["error","false","string","\u041e\u0448\u0438\u0431\u043a\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u0430 \u043a \u0441\u0435\u0440\u0432\u0435\u0440\u0443!"],l,l)
 s=1
 break
 s=6
 break
 case 3:s=2
 break
-case 6:if(m.b===200){i=m
-k=t.N
-if(B.d.dm(A.ac1(A.abL(i.e).c.a.h(0,"charset")).dG(0,i.w)).length===0){q=A.M(["error","true","string",""],k,k)
+case 6:if(m.b===200){l=m
+j=t.N
+if(B.d.dm(A.ac1(A.abL(l.e).c.a.h(0,"charset")).dG(0,l.w)).length===0){q=A.M(["error","true","string",""],j,j)
 s=1
-break}else{i=m
-q=A.M(["error","false","string",A.ac1(A.abL(i.e).c.a.h(0,"charset")).dG(0,i.w)],k,k)
+break}else{l=m
+q=A.M(["error","false","string",A.ac1(A.abL(l.e).c.a.h(0,"charset")).dG(0,l.w)],j,j)
 s=1
-break}}i=t.N
-q=A.M(["error","false","string","\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u043e \u0432\u0440\u0435\u043c\u044f \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438!"],i,i)
+break}}l=t.N
+q=A.M(["error","false","string","\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u043e \u0432\u0440\u0435\u043c\u044f \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438!"],l,l)
 s=1
 break
 case 1:return A.t(q,r)
